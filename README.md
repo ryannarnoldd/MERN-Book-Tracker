@@ -1,9 +1,9 @@
-# SocialPI 
+# MERN Book Tracker
 ![Github License](https://img.shields.io/badge/license-MIT-green)
 
 ## Description
 
-This is a Social Media Network Backend API. This is solely for backend purposes and has not current front-end to accompany it. On this project, you can add, create, post, and react to posts in the network. This application is built using TypeScript and NoSQL. This is for Module 17 of the Full Stack Coding Bootcamp.
+This is a MERN Book Tracker for Module 18: MERN-and-Authentication. The purpose of this project is to use the full MERN stack, while incorpinating authentication. The user is able to create an account where they are then able to search books, using the Google Books API, and save them to their account. The user is also able to view their saved books, and delete them from their account. (Books (keys) are saved in local storage too)
 
 ## Table of Contents
 
@@ -16,15 +16,11 @@ This is a Social Media Network Backend API. This is solely for backend purposes 
 
 ## Installation
 
-To install this project, the user must clone the repository from GitHub (The link where you are reading this). The user must have Typescript installed. Once you are in the repository, run the command `npm install` to install the necessary packages and dependencies. After that, you need to `npm run build` to build the code, and `npm run start` to start the server.
+To install this project, the user must clone the repository from GitHub (The link where you are reading this). Then, you need to change the `.env.EXAMPLE` to `.env` and add your own information. After that, you need to run `npm install` in the terminal to install all the dependencies. Running `npm run build` is just as important after. Once that is all done, you can run `npm run develop` to start the server. (Front and back) The user will then be able to test the API using GQL.
 
 ## Usage
 
-Once 'npm run start' is ran, the user will be able to, only in Insomnia, test the API doing a mulitude of REST calls. On the Users routers, you can first get all the users in the database, or find a spcific user with just a userId. You can also create users, delete a user, and update the information on the user. Under the user, you are able to add friends and delete friends, by adding their userId.
-
-For the thoughts portion of the project, you can first get all the thoughts in the database, or find a spcific thought with just a thoughtId. You can also create thoughts, delete a thought, and update the information on the thought. Under the thought, you are able to add reactions and delete reactions, by adding their thoughtId and a body.
-
-<img width="281" alt="Screenshot 2024-12-16 at 8 46 24 PM" src="https://github.com/user-attachments/assets/d059439b-46fc-4baf-a0d8-60bd994adf9c" />
+Once `npm run develop` is run, the user will be able to navigate to the browser and use the application. The user will be able to create an account (using the login and signup form). Under the search books tab, the user is able to search any book (that is known under the Google Books API) and view up to 10 books at a time. The user is able to save the books to their account, and view them under the saved books tab. The user is also able to delete the books from their account (given as an option under each saved book).
 
 ## Contributing
 
@@ -36,7 +32,7 @@ The license used is MIT. Here is the link to get detailed information for this l
 
 ## Tests
 
-Here is the linked video for the project that is used in the project submission.
+Here are a few tests that were run on the application:
 
 ## Questions
 
