@@ -5,5 +5,7 @@ export default interface IUserDocument {
   password: string | null;
   savedBooks: IBook[];
   isCorrectPassword(password: string): Promise<boolean>;
-  bookCount: number | null;
+  bookCount: number | null; 
 }
+
+// bookCount is a virtual property on User.

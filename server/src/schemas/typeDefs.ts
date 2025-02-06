@@ -45,3 +45,6 @@ const typeDefs = gql`
 `;
 
 export default typeDefs;
+
+
+// BookInput used for resolver arguments.
