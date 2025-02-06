@@ -44,6 +44,7 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
       event.stopPropagation();
     }
 
+    // Calls gql mutation
     try {
       const { data } = await addUser({
         variables: { ...userFormData },
@@ -75,6 +76,7 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
           Something went wrong with your signup!
         </Alert>
 
+{/* Username */}
         <Form.Group className='mb-3'>
           <Form.Label htmlFor="username">Username</Form.Label>
           <Form.Control
@@ -90,6 +92,7 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
+{/* Email */}
         <Form.Group className='mb-3'>
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
@@ -105,6 +108,7 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
+{/* And password. */}
         <Form.Group className='mb-3'>
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
@@ -119,6 +123,7 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
+        {/* Makes sure all froms are filled out. */}
         <Button
           disabled={
             !(

@@ -6,3 +6,5 @@ export interface Book {
   link: string;
   title: string;
 }
+
+// Book interface for front end

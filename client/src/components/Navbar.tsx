@@ -6,6 +6,7 @@ import LoginForm from './LoginForm';
 
 import Auth from '../utils/auth';
 
+
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +16,7 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            Google Books Search
+            MERN: Book Tracker
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
@@ -39,6 +40,7 @@ const AppNavbar = () => {
         </Container>
       </Navbar>
       {/* set modal data up */}
+      {/* Collapsable */}
       <Modal
         size='lg'
         show={showModal}

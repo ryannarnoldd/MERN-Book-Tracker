@@ -16,11 +16,10 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
 
   const [login, { error }] = useMutation(LOGIN_USER);
 
+  
   useEffect(() => {
     if (error) {
       setShowAlert(true);
-    } else {
-      setShowAlert(false);
     }
   }, [error]);
 
@@ -32,6 +31,7 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    // Checks validation
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -49,6 +49,7 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
     }
 
     // clear form values
+
     setUserFormData({
       email: '',
       password: '',
@@ -62,6 +63,7 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
           dismissible
           onClose={() => setShowAlert(false)}
           show={showAlert}
+
           variant="danger"
         >
           Something went wrong with your login credentials!
@@ -81,6 +83,7 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
+        {/* Passwords form */}
         <Form.Group className='mb-3'>
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
@@ -95,6 +98,7 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
+        {/* Makes sure the form is validated with both email and password present*/}
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
