@@ -46,6 +46,7 @@ const SavedBooks = () => {
     return <h2>LOADING...</h2>;
   }
 
+
   return (
     <>
       <div className="text-light bg-dark p-5">
@@ -56,7 +57,7 @@ const SavedBooks = () => {
       <Container>
         <h2 className='pt-5'>
           {userData.savedBooks?.length
-            ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'
+            ? `Viewing ${userData.savedBooks.length} saved book(s)!'
             }:`
             : 'You have no saved books!'}
         </h2>
@@ -81,7 +82,7 @@ const SavedBooks = () => {
                         className="btn-block btn-danger"
                         onClick={() => handleDeleteBook(book.bookId)}
                       >
-                        Delete this Book!
+                        Delete Book!
                       </Button>
                     </Card.Body>
                   </Card>

@@ -29,7 +29,6 @@ const SearchBooks = () => {
   const [saveBook] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
-  // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
@@ -38,6 +37,7 @@ const SearchBooks = () => {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    // check if searchInput is empty
     if (!searchInput) {
       return false;
     }
@@ -81,6 +81,7 @@ const SearchBooks = () => {
     }
 
     try {
+      // Calls mutation.
       await saveBook({
         variables: { bookData: { ...bookToSave } },
       });
@@ -116,6 +117,8 @@ const SearchBooks = () => {
           </Form>
         </Container>
       </div>
+
+
 
       <Container>
         <h2 className='pt-5'>

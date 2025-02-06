@@ -19,6 +19,7 @@ export const removeBookId = (bookId: string) => {
     ? JSON.parse(localStorage.getItem('saved_books')!)
     : null;
 
+    
   if (!savedBookIds) {
     return false;
   }
