@@ -1,7 +1,7 @@
 {
   "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Descirption",
   "main": "server/dist/server.js",
   "scripts": {
     "start": "node server/dist/server.js",
